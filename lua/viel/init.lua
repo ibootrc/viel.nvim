@@ -1,9 +1,8 @@
 local M = {}
 
 local config = {
-	transparent = true, -- Set to true for your Kitty background
+	transparent = true,
 	italics = true,
-	overrides = {},
 }
 
 function M.setup(opts)
@@ -19,11 +18,10 @@ function M.load()
 	vim.g.colors_name = "viel"
 
 	local theme = require("viel.theme").get(config)
-	local utils = require("viel.utils")
 
-	-- Apply generated theme
+	-- Applying highlights directly without an external utils file
 	for group, opts in pairs(theme) do
-		utils.highlight(group, opts)
+		vim.api.nvim_set_hl(0, group, opts)
 	end
 end
 
