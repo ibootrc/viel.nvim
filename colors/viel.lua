@@ -1,1 +1,1 @@
-require("viel").colorscheme()
+require("viel").load()
