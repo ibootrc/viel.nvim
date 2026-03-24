@@ -13,7 +13,7 @@ M.palette = {
 	overlay = "#324266", -- Guides/Inlay Hints
 	muted = "#7D97AD", -- Comments
 }
-
+-- comment
 function M.setup()
 	if vim.g.colors_name then
 		vim.cmd("hi clear")
